@@ -1,4 +1,4 @@
-package FP.tutorial_2
+package FP_tutorials.FP_Tutorials_21002061
 object T2_question_4 extends App {
   def calculateAttendance(price: Double): Int = {
     if (price == 15.0) {

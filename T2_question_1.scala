@@ -1,4 +1,4 @@
-package FP.tutorial_2
+package FP_tutorials.FP_Tutorials_21002061
 
 object T2_question_1 extends App {
   //Declaring the variables and assigning with the initial values
