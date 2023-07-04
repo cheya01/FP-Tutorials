@@ -2,9 +2,11 @@ package FP_tutorials.FP_Tutorials_21002061
 
 object T4_question_1 extends App {
   println("Enter the deposit amount: ")
-  val dep = scala.io.StdIn.readInt()
+  val dep = scala.io.StdIn.readDouble()
 
   var depInterest: Double = 0
+
+  println("The interest for the deposit is Rs." + calcInterest(dep))
 
   def calcInterest(dep: Double): Double = {
     if (dep <= 20000) {
@@ -22,6 +24,4 @@ object T4_question_1 extends App {
     }
 
   }
-
-  println("The interest for the deposit is Rs." + calcInterest(dep: Double))
 }
