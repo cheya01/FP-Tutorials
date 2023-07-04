@@ -1,6 +1,6 @@
 package FP.tutorial_2
 
-object question_01 extends App {
+object T2_question_1 extends App {
   //Declaring the variables and assigning with the initial values
   val k,i,j: Int = 2
   val m,n: Int = 5

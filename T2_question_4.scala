@@ -1,5 +1,5 @@
 package FP.tutorial_2
-object question_04 extends App {
+object T2_question_4 extends App {
   def calculateAttendance(price: Double): Int = {
     if (price == 15.0) {
       120

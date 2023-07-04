@@ -1,6 +1,6 @@
 package FP.tutorial_2
 
-object question_03 extends App {
+object T2_question_3 extends App {
   val normal_rate = 250
   val OT_rate = 85
   val tax = 0.12

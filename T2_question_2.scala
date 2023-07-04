@@ -1,6 +1,6 @@
 package FP.tutorial_2
 
-object question_02 extends App {
+object T2_question_2 extends App {
 
   // initialization
   var a: Int=2
