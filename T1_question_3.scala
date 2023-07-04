@@ -1,4 +1,4 @@
-package FP_tutorials.FP-Tutorials
+package FP_tutorials
 
 object T1_question_3 extends App {
   def volumeCalculator(r: Double): Double = {

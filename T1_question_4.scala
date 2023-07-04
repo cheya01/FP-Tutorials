@@ -1,4 +1,4 @@
-package FP_tutorials.FP-Tutorials
+package FP_tutorials
 
 object T1_question_4 extends App {
   def costCalculator(n: Double): Double = {

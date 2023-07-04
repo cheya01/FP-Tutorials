@@ -1,4 +1,4 @@
-package FP_tutorials.FP-Tutorials
+package FP_tutorials
 
 object T3_question_2 extends App {
   def filterStrings(input: List[String]): List[String] = {

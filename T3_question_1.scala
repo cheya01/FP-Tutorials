@@ -1,4 +1,4 @@
-package FP_tutorials.FP-Tutorials
+package FP_tutorials
 
 object T3_question_1 extends App {
   def reverseString(input: String): String = {

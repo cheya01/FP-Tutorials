@@ -1,4 +1,4 @@
-package FP_tutorials.FP-Tutorials
+package FP_tutorials
 
 object T4_question_1 extends App {
   println("Enter the deposit amount: ")
