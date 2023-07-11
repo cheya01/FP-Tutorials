@@ -1,21 +1,19 @@
 package FP_tutorials.FP_Tutorials_21002061
+object T5_question_1 extends App {
 
-object T5_question_1 {
-  def isPrime(n: Int): Boolean = {
-    def isPrimeUtil(n: Int, i: Int): Boolean = {
-      if (n <= 2)
-        return n == 2
-
-      if (n % i == 0)
-        return false
-
-      if (i * i > n)
-        return true
-
-      isPrimeUtil(n, i + 1)
-    }
-
-    isPrimeUtil(n, 2)
+  def IfPrime(n: Int, divisor: Int = 2): Boolean = {
+    if (n <= 1)
+      false
+    else if (divisor == n)
+      true
+    else if (n % divisor == 0)
+      false
+    else
+      IfPrime(n, divisor + 1)
   }
 
+
+  print("Enter a number to check if it is a prime number: ")
+  var num = scala.io.StdIn.readInt()
+  println(IfPrime(num))
 }
