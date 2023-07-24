@@ -8,7 +8,8 @@ object T5_question_5 extends App {
     else sumOfEvens(n-1)
   }
 
-  print("Enter a number: ")
-  var num = scala.io.StdIn.readInt()
+  //print("Enter a number: ")
+  //var num = scala.io.StdIn.readInt()
+  var num = 4
   println(sumOfEvens(num-1))
 }

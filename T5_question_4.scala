@@ -8,6 +8,6 @@ object T5_question_4 extends App {
     else EvenOrOdd(n - 2)
   }
 
-  println(EvenOrOdd(124))
-  println(EvenOrOdd(127))
+  println(EvenOrOdd(3))
+  //println(EvenOrOdd(127))
 }

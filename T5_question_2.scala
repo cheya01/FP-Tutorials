@@ -2,6 +2,7 @@ package FP_tutorials.FP_Tutorials_21002061
 
 object T5_question_2 extends App {
   def primeSeq(n: Int): Unit = {
+    //function to check whether prime
     def isPrime(num: Int, i: Int): Boolean = {
       if (num <= 2)
         return num == 2
@@ -14,10 +15,10 @@ object T5_question_2 extends App {
 
       isPrime(num, i + 1)
     }
-
+//function to print a single prime number
     def printPrimes(num: Int): Unit = {
       if (num <= 1)
-        return
+        return 1
 
       printPrimes(num - 1)
 
@@ -27,7 +28,7 @@ object T5_question_2 extends App {
 
     printPrimes(n - 1)
   }
-  primeSeq(10)
+  primeSeq(5)
 }
 
 
