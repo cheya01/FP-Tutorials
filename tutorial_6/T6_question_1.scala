@@ -18,7 +18,7 @@ object T6_question_1 {
 
   // Decryption function
   def decrypt(text: String, shift: Int): String = {
-    encrypt(text, -shift) // Decryption is simply encryption with a negative shift
+    encrypt(text, 26-shift) // Decryption is simply encryption with a negative shift
   }
 
   // Cipher function to process data using Encryption or Decryption
