@@ -21,14 +21,28 @@ object T6_question_1 {
     encrypt(text, -shift) // Decryption is simply encryption with a negative shift
   }
 
+  // Cipher function to process data using Encryption or Decryption
+  def cipher(data: String, shift: Int, process: (String, Int) => String): String = {
+    process(data, shift)
+  }
+
   def main(args: Array[String]): Unit = {
-    val plainText = "I love UOC!"
+    val plainText1 = "ABC-XYZ"
+    val plainText2 = "I love UOC!"
     val shift = 1
 
-    val encryptedText = encrypt(plainText, shift)
-    println(s"Encrypted Text: $encryptedText")
+    val encryptedText1 = cipher(plainText1, shift, encrypt)
+    println(s"Encrypted Text: $encryptedText1")
 
-    val decryptedText = decrypt(encryptedText, shift)
-    println(s"Decrypted Text: $decryptedText")
+    val decryptedText1 = cipher(encryptedText1, shift, decrypt)
+    println(s"Decrypted Text: $decryptedText1")
+
+    println("")
+
+    val encryptedText2 = cipher(plainText2, shift, encrypt)
+    println(s"Encrypted Text: $encryptedText2")
+
+    val decryptedText2 = cipher(encryptedText2, shift, decrypt)
+    println(s"Decrypted Text: $decryptedText2")
   }
 }
