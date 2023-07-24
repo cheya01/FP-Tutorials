@@ -1,4 +1,4 @@
-package FP_tutorials.FP_Tutorials_21002061
+package FP_tutorials.FP_Tutorials_21002061.tutorial_2
 
 object T2_question_3 extends App {
   val normal_rate = 250

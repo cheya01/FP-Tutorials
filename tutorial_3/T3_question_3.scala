@@ -1,4 +1,4 @@
-package FP_tutorials.FP_Tutorials_21002061
+package FP_tutorials.FP_Tutorials_21002061.tutorial_3
 
 object T3_question_3 extends App {
   def calculateMean(num1: Int, num2: Int): Double = {

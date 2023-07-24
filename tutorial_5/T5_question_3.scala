@@ -1,4 +1,4 @@
-package FP_tutorials.FP_Tutorials_21002061
+package FP_tutorials.FP_Tutorials_21002061.tutorial_5
 
 object T5_question_3 extends App {
   def PrintAddition(num: Int) : Int = {

@@ -1,4 +1,4 @@
-package FP_tutorials.FP_Tutorials_21002061
+package FP_tutorials.FP_Tutorials_21002061.tutorial_4
 
 object T4_question_2 extends App {
   println("Enter an integer of your choice:")

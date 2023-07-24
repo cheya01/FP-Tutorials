@@ -1,4 +1,4 @@
-package FP_tutorials.FP_Tutorials_21002061
+package FP_tutorials.FP_Tutorials_21002061.tutorial_1
 
 object T1_question_2 extends App {
   def CtoF_tempConverter(t: Double): Double = {

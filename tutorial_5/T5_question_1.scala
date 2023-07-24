@@ -1,4 +1,5 @@
-package FP_tutorials.FP_Tutorials_21002061
+package FP_tutorials.FP_Tutorials_21002061.tutorial_5
+
 object T5_question_1 extends App {
 
   def IfPrime(n: Int, divisor: Int = 2): Boolean = {
