@@ -1,18 +1,23 @@
 package FP_tutorials.FP_Tutorials_21002061.tutorial_8
 
-object T8_question_01 {
-  def calculateInterest: Double => Double = {depositAmount => depositAmount match {
-        case amount if amount <= 20000 => amount * 0.02
-        case amount if amount <= 200000 => amount * 0.04
-        case amount if amount <= 2000000 => amount * 0.035
-        case amount => amount * 0.065
-      }
-  }
-    def main(args: Array[String]): Unit = {
-      val depositAmount = 250000.0 // Example deposit amount
-      val interest = calculateInterest(depositAmount)
-      println(s"The interest earned on Rs. $depositAmount is Rs. $interest")
+object T8_question_01 extends App {
+  println("Enter the deposit amount: ")
+  val dep = scala.io.StdIn.readInt()
+
+  val calcInterest: Double => Double = (dep) => {
+    if (dep <= 20000) {
+      dep * 0.02
+    } else if (dep <= 200000) {
+      dep * 0.04
+    } else if (dep <= 2000000) {
+      dep * 0.035
+    } else {
+      dep * 0.065
     }
+  }
+
+  val depInterest = calcInterest(dep)
+  println(s"The interest for the deposit is: $depInterest")
 
 
 }
