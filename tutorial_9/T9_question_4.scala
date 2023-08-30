@@ -1,60 +1,26 @@
+//package FP_tutorials.FP_Tutorials_21002061.tutorial_9
 
-
-import scala.collection.immutable.List
-
-class Account(val accountId: Int, var balance: Double) {
-
-  def deposit(amount: Double): Unit = {
-    if (amount > 0) {
-      balance += amount
-      println(s"Deposited $amount. New balance: $balance")
-    } else {
-      println("Invalid deposit amount. Amount must be greater than 0.")
-    }
-  }
-
-  def withdraw(amount: Double): Boolean = {
-    if (amount > 0 && amount <= balance) {
-      balance -= amount
-      println(s"Withdrew $amount. New balance: $balance")
-      true
-    } else {
-      println("Withdrawal failed. Insufficient funds or invalid amount.")
-      false
-    }
-  }
-
-  def transfer(toAccount: Account, amount: Double): Boolean = {
-    if (amount > 0 && amount <= balance) {
-      if (withdraw(amount)) {
-        toAccount.deposit(amount)
-        println(s"Transferred $amount to Account ${toAccount.accountId}")
-        true
-      } else {
-        false
-      }
-    } else {
-      println("Transfer failed. Insufficient funds or invalid amount.")
-      false
-    }
-  }
+class Account(initialBalance: Double) {
+  private var balance: Double = initialBalance
 
   def applyInterest(): Unit = {
     if (balance > 0) {
-      balance += balance * 0.05 // Deposit interest
+      balance += balance * 0.05
     } else {
-      balance += balance * 0.1 // Overdraft interest
+      balance += balance * 0.1
     }
   }
+
+  def getBalance: Double = balance
 }
 
 class Bank(val accounts: List[Account]) {
-  def getAccountsWithNegativeBalance: List[Account] = {
-    accounts.filter(_.balance < 0)
+  def accountsWithNegativeBalances: List[Account] = {
+    accounts.filter(account => account.getBalance < 0)
   }
 
-  def calculateTotalBalance: Double = {
-    accounts.map(_.balance).sum
+  def sumOfAllBalances: Double = {
+    accounts.map(_.getBalance).sum
   }
 
   def applyInterestToAllAccounts(): Unit = {
@@ -62,27 +28,22 @@ class Bank(val accounts: List[Account]) {
   }
 }
 
-
-
-object T9_question_4{
+object T9_question_4 {
   def main(args: Array[String]): Unit = {
-    val account1 = new Account(1, 1000.0)
-    val account2 = new Account(2, -500.0)
-    val account3 = new Account(3, 2000.0)
+    val account1 = new Account(100)
+    val account2 = new Account(-200)
+    val account3 = new Account(500)
 
     val bank = new Bank(List(account1, account2, account3))
 
-    val accountsWithNegativeBalance = bank.getAccountsWithNegativeBalance
-    val totalBalance = bank.calculateTotalBalance
+    println("Accounts with negative balances:")
+    bank.accountsWithNegativeBalances.foreach(account => println(s"${account.getBalance}"))
 
-    println("Accounts with negative balance:")
-    accountsWithNegativeBalance.foreach(account => println(s"Account ${account.accountId}: ${account.balance}"))
-
+    val totalBalance = bank.sumOfAllBalances
     println(s"Total balance of all accounts: $totalBalance")
 
-    bank.applyInterestToAllAccounts()
-
     println("Balances after applying interest:")
-    bank.accounts.foreach(account => println(s"Account ${account.accountId}: ${account.balance}"))
+    bank.applyInterestToAllAccounts()
+    bank.accounts.foreach(account => println(s"${account.getBalance}"))
   }
 }
